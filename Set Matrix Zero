@@ -1,0 +1,28 @@
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+    
+    int col0=0, rows=matrix.size(), cols=matrix[i].size();
+      
+      // traversing through rows and coloums to find 0s and if found then make laft most and top most col and row element 0 respectively
+      
+      for(int i=0; i<rows; i++){    //if left most coloumn contains any element as 0 then we will set col0 as false i.e. 1
+         if(matrix[i][0]==0)
+            col0=1;
+            
+            for(int j=1; j<cols; j++)
+               if(matrix[i][j]==0)
+                 matrix[i][0]=matrix[0][i]=0;
+              
+   //traversing the rows and coloums from the back and checking if the left most col and top most row  contain any zero then mark the element associated with them as 0
+              
+              for(i= row-1; i>=0; i--){
+                  for(j=cols-1; j>=1; j--)
+                     if(matrix[i][0]==0 || matrix[0][i]==0)
+                         matrix[i][j]=0; 
+                   
+                   if(col0==1)
+                   matrix[i][0]=0;
+              }
+         }
+    };
