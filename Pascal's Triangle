@@ -1,0 +1,13 @@
+vector<vector<int>> generate(int numRows){
+vector<vector<int>> r(numRows);
+
+for(int i=0; i<numRows; i++){
+
+r[i].resize(i+1);      //inittializing empty vector as size of rows
+r[i][0]=r[i][i]=1;     //setting first and last element of every row as 1
+
+for(int j=1; j<i; j++){
+r[i][j]= r[i-1][j-1] + r[i-1] j[i];  //[j-1]th value of prev row is added to j[i]th value of prev row to print current element in current coloumn
+}
+return r;
+}
