@@ -2,7 +2,7 @@ Class solution{
 public:
 
 vector<int>getRow(int rowIndex){
-   vector<int>result(rowIndex+1,1)   // size of result array is index+1 and ia initialized as 1
+   vector<int>result(rowIndex+1,1)   // size of result array is index+1 and i is initialized as 1
    
    for(int i=0; i<rowIndex; i++){
    
