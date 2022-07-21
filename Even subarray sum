@@ -1,0 +1,13 @@
+Given an array of size n and we have to check whether even substring's sum is 0 or not
+
+class solution{
+ public:
+ 
+ string solve(int n, vector<int>&a){
+  for(int i=0; i<n; i++){
+    if(a[i] + a[i+1] != 0)
+     return false;
+   }
+   return true;
+  }
+};
