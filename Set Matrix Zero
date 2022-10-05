@@ -2,7 +2,7 @@ class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
     
-    int col0=0, rows=matrix.size(), cols=matrix[i].size();
+    int col0=0, rows=matrix.size(), cols=matrix[0].size();
       
       // traversing through rows and coloums to find 0s and if found then make laft most and top most col and row element 0 respectively
       
